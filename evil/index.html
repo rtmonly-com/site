@@ -1,0 +1,194 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+    <title>a</title> 
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body bgcolor="#000000">
+
+    <img id="center-eyes-gif" src="images/eyes.gif" alt="Eyes" width="387" height="527" draggable="false">
+
+    <div id="hidden-content" class="hidden-content fade-in" align="center">
+        <br>
+        <p id="dynamic-text"><font size="5" color="#FFFFFF">　ｉａｍ<br>　ｙｏｕｒ ｇｏｄ </font></p>
+        <br><br><br><br>
+
+        <img id="iamgod-gif" border="0" src="images/IAMGOD.gif" alt="Lain" width="290" height="352" draggable="false">
+
+        <br><br><br><br><br>
+
+        <div class="image-row">
+            <a href="https://steamcommunity.com/id/rtmonly/" target="_blank" rel="noopener noreferrer">
+                <img src="images/image1.png" alt="Image 1" class="small-image">
+            </a>
+            <a href="#">
+                <img src="images/image2.png" alt="Image 2" class="small-image">
+                <span class="hover-text">@rtmonly</span>
+            </a>
+	            <a href="https://www.soundcloud.com/adrian" target="_blank" rel="noopener noreferrer">
+                <img src="images/image4.png" alt="soundcloud logo" class="small-image">
+            </a>
+                    </div>
+
+        <br><br>
+        <font size="3" color="#FFFFFF">forever gone<br>not to return</font>
+    </div>
+
+    <script>
+	    document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('mousemove', function(e) {
+            const trail = document.createElement('div');
+            trail.classList.add('trail');
+            
+            trail.style.left = e.pageX + 'px';
+            trail.style.top = e.pageY + 'px';
+            
+            document.body.appendChild(trail);
+
+            setTimeout(function() {
+                trail.remove();
+            }, 150); 
+        });
+
+        function unmuteAudio() {
+            const audio = document.getElementById('background-audio');
+            if (audio.muted) {
+                audio.muted = false;
+                audio.volume = 0.2;
+                audio.play();
+
+                setTimeout(function() {
+                    document.getElementById('center-eyes-gif').style.display = 'none';
+                    const hiddenContent = document.getElementById('hidden-content');
+                    hiddenContent.style.display = 'block'; 
+                    hiddenContent.classList.add('fade-in'); 
+                    
+                    setTimeout(function() {
+                        hiddenContent.classList.add('show');
+                    }, 10);
+
+                    document.getElementById('iamgod-gif').style.display = 'block'; 
+                    document.title = 'adrian'; 
+                }, 3000);
+            }
+        }
+
+        window.addEventListener('click', unmuteAudio);
+        window.addEventListener('touchstart', unmuteAudio);
+
+        const texts = [
+            '<font size="5" color="#FFFFFF">　ｓｅｅｋ<br>　ｔｈｅ ｔｒｕｔｈ </font>',
+			'<font size="5" color="#FFFFFF">　ｉｔ ｉｓ<br>　ｗｉｔｈｉｎ ｙｏｕ </font>',
+			'<font size="5" color="#FFFFFF">　ｉｎｆｉｎｉｔｅ<br>　ｄａｒｋｎｅｓｓ </font>',
+			'<font size="5" color="#FFFFFF">　ｄｏ ｙｏｕ<br>　ｒｅｍｅｍｂｅｒ？ </font>',
+			'<font size="5" color="#FFFFFF">  ｔｈｅ ｅｎｄ<br>  ｉｓ ｃｏｍｉｎｇ </font>',
+			'<font size="5" color="#FFFFFF">  ｔｉｍｅ ｉｓ<br>  ａｎ ｉｌｌｕｓｉｏｎ </font>',
+			'<font size="5" color="#FFFFFF">  ｙｏｕ ａｒｅ<br>  ｎｏｔ ａｌｏｎｅ </font>',
+			'<font size="5" color="#FFFFFF">　ｗｈｏ<br>　ａｍ ｉ？ </font>'
+        ];
+        function getRandomDelay() {
+            return Math.random() < 0.5 ? 1300 : 90;
+        }
+
+        function changeText() {
+            const randomIndex = Math.floor(Math.random() * texts.length);
+            document.getElementById('dynamic-text').innerHTML = texts[randomIndex];
+
+            const delay = getRandomDelay();
+			console.log('Delay:', delay); 
+
+            setTimeout(changeText, delay);	
+			
+        }
+
+        function startTextChange() {
+            setTimeout(changeText, 4000); 
+        }
+
+        startTextChange();
+		 document.onkeydown = function(e) {
+        if (e.key === 'F12' || 
+            (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+            (e.ctrlKey && e.shiftKey && e.key === 'J') || 
+            (e.ctrlKey && e.key === 'U')) {
+            return false;
+        }
+    };
+	
+    </script>
+
+    <audio id="background-audio" autoplay="" loop="" muted="">
+        <source src="media/audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <div id="whisper-container"></div>
+    <script>
+        const whisperTexts = [
+            "ｙｏｕ　ａｒｅ　ｂｅｉｎｇ　ｗａｔｃｈｅｄ",
+            "ｄｏｎ'ｔ　ｌｏｏｋ　ｂａｃｋ",
+            "ｉｔ　ｗｏｎ'ｔ　ｌａｓｔ　ｌｏｎｇ",
+            "ｗｈａｔ　ｈａｖｅ　ｙｏｕ　ｄｏｎｅ？",
+            "ｉｔ’ｓ　ａｌｍｏｓｔ　ｏｖｅｒ",
+            "ｔｈｅ　ｅｎｄ　ｉｓ　ｎｅａｒ",
+            "ｙｏｕ　ｗｏｎ'ｔ　ｂｅｌｉｅｖｅ　ｍｅ",
+            "ｓｏｍｅｔｈｉｎｇ　ｗａｉｔｓ　ｉｎ　ｔｈｅ　ｓｈａｄｏｗｓ",
+            "ｉｔ’ｓ　ｔｏｏ　ｑｕｉｅｔ",
+            "ｔｈｅｙ　ｋｎｏｗ",
+            "ａｌｌ　ｗｉｌｌ　ｂｅ　ｒｅｖｅａｌｅｄ",
+            "ｙｏｕ　ａｒｅ　ｏｎ　ｂｏｒｒｏｗｅｄ　ｔｉｍｅ"
+
+        ];
+
+
+        function showWhisper() {
+            const whisperContainer = document.getElementById("whisper-container");
+            const whisper = document.createElement("div");
+            whisper.classList.add("whisper");
+
+            const randomText = whisperTexts[Math.floor(Math.random() * whisperTexts.length)];
+            whisper.innerHTML = randomText;
+            whisperContainer.appendChild(whisper);
+
+
+            document.addEventListener("mousemove", function(e) {
+                const mouseX = e.pageX;
+                const mouseY = e.pageY;
+
+                let randX = Math.floor(Math.random() * window.innerWidth);
+                let randY = Math.floor(Math.random() * window.innerHeight);
+
+
+                while (Math.abs(randX - mouseX) < 150 && Math.abs(randY - mouseY) < 150) {
+                    randX = Math.floor(Math.random() * window.innerWidth);
+                    randY = Math.floor(Math.random() * window.innerHeight);
+                }
+
+                whisper.style.left = randX + "px";
+                whisper.style.top = randY + "px";
+            });
+
+            setTimeout(() => {
+                whisper.style.opacity = 1;
+            }, 100);
+
+            setTimeout(() => {
+                whisper.style.opacity = 0;
+                setTimeout(() => whisper.remove(), 1000);
+            }, 4000);
+        }
+
+        setInterval(showWhisper, Math.random() * 10000 + 5000);
+    </script>
+
+
+
+</body></html>
