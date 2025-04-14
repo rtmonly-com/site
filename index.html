@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head>
+    <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adrian</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="shortcut icon" href="assets/img/favicon.webp" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="p-6 h-dvh" style="background-color: rgba(4,4,4,1)">
+
+
+
+    <div class="rtmonlyEnter top-0 left-0"></div>
+    <div class="enterDiv flex h-full w-full absolute justify-center items-center top-0 left-0">
+        <img class="enterEye" src="/assets/img/eye-close.svg">
+    </div>
+
+    <canvas class="fireworks"></canvas>
+    <canvas id="c"></canvas>
+
+
+    <div class="body-border"></div>
+    <div class="inverted-corner top-left "></div>
+    <div class="inverted-corner top-right"></div>
+    <div class="inverted-corner bottom-left"></div>
+    <div class="inverted-corner bottom-right"></div>
+
+    <div class="rtmonlyBox flex flex-col justify-center h-full w-full xl:pl-16 xl:flex-row z-10">
+
+        <div class="flex profileInfo flex-col w-full xl:w-1/2 justify-center gap-16">
+
+            <div class="rtmonlyProfile">
+                <img src="/assets/img/pfp.png">
+                <div class="name">adrian <img class="dev" src="/assets/img/dev2.png" title="yeah!"></div>
+                <div class="bio">related thru money</div>
+            </div>
+
+            <div class="rtmonlyWrap">
+                <div class="rtmonlyItem"></div>
+                <div class="rtmonlyItem"></div>
+                <div class="rtmonlyItem"></div>
+            </div>
+
+        </div>
+
+        <div class="hidden xl:flex w-full relative vid-sec">
+            <section class="wrapper p-8 xl:p-32 rounded-2xl">
+                <div class="vid-ol rounded-3xl"></div>
+                <div class="flex absolute top-0 hidden xl:flex xl:left-24 h-full items-center">
+                    <div class="vid-btn z-10 bg-black flex p-3 cursor-pointer rounded-full w-16 h-16 bg-[#0A0F13] shadow shadow-xl z-10">
+                        <svg class="vid-icon1" clip-rule="evenodd" fill-rule="evenodd" fill="#fff" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm1.5-.791 6.449-7.691c.289-.344.879-.338 1.16.012 0 0 1.954 2.434 1.954 2.434l1.704-1.283c.319-.24.816-.168 1.054.154l4.679 6.335v-12.44c-1.58.58-4.819 1.798-8.5 1.798-3.672 0-6.918-1.218-8.5-1.799zm2.657-.834c1.623-.471 3.657-.903 5.843-.903 2.309 0 4.444.479 6.105.98l-3.041-4.117-1.065.802.275.344c.259.323.206.796-.117 1.054-.323.259-.795.207-1.054-.117l-2.591-3.236zm.698-9.534c-1.051 0-1.905.854-1.905 1.905s.854 1.904 1.905 1.904 1.904-.853 1.904-1.904-.853-1.905-1.904-1.905zm0 1.3c.333 0 .604.271.604.605 0 .333-.271.604-.604.604-.334 0-.605-.271-.605-.604 0-.334.271-.605.605-.605z" fill-rule="nonzero"></path>
+                        </svg>
+                        <svg class="vid-icon2" clip-rule="evenodd" fill-rule="evenodd" fill="#fff" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m2 19v-14c0-.552.447-1 1-1 .542 0 4.418 2.028 9 2.028 4.593 0 8.456-2.028 9-2.028.55 0 1 .447 1 1v14c0 .553-.45 1-1 1-.544 0-4.407-2.028-9-2.028-4.582 0-8.458 2.028-9 2.028-.553 0-1-.448-1-1zm8.316-7.209 2.592 3.237c.258.323.731.375 1.054.116.323-.258.375-.731.117-1.054l-.276-.344 1.084-.815s3.307 4.206 3.307 4.206c.256.325.728.381 1.053.126.325-.256.382-.728.126-1.054l-3.761-4.783c-.252-.321-.715-.381-1.041-.135l-1.703 1.282s-1.954-2.433-1.954-2.433c-.282-.351-.871-.357-1.16-.013l-5.112 6.097c-.266.317-.224.79.093 1.056s.79.225 1.056-.093zm-4.139-4.216c-1.051 0-1.904.853-1.904 1.904s.853 1.905 1.904 1.905 1.904-.854 1.904-1.905-.853-1.904-1.904-1.904zm0 1.3c.334 0 .604.271.604.604 0 .334-.27.605-.604.605-.333 0-.604-.271-.604-.605 0-.333.271-.604.604-.604z" fill-rule="nonzero"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="flex h-full relative z-0">
+                    <video loop="" playsinline="" class="rtmonlyPlayer video h-full object-cover object-center relative" id="vid" src="/assets/vid.mp4">
+                    </video>
+                    <div class="ol"></div>
+                </div>
+                <canvas width="10" height="6" aria-hidden="true" class="canvas rounded-3xl" id="canvas"></canvas>
+            </section>
+        </div>
+
+    </div>
+
+    <video loop="" playsinline="" class="rtmonlyPlayer2 xl:hidden video h-full object-cover object-center fixed -z-10 top-0 left-0 " src="/assets/vid.mp4"></video>
+    <div class="ol flex xl:hidden fixed top-0 left-0 h-full w-full opacity-100"></div>
+
+    <svg class="play" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="display: none;">
+        <path d="M3 22v-20l18 10-18 10z"></path>
+    </svg>
+    <svg class="pause" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="display: none;">
+        <path d="M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z"></path>
+    </svg>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.getElementById("vid");
+            const playSvg = document.querySelector(".play");
+            const pauseSvg = document.querySelector(".pause");
+
+            playSvg.style.display = "none";
+            pauseSvg.style.display = "none";
+
+            video.addEventListener("click", function (event) {
+                const isPaused = video.paused;
+                const x = event.clientX;
+                const y = event.clientY;
+                const svgToShow = isPaused ? playSvg : pauseSvg;
+
+                if (isPaused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+
+                svgToShow.style.left = `${x - 64}px`;
+                svgToShow.style.top = `${y - 64}px`;
+                svgToShow.style.display = "block";
+                svgToShow.style.opacity = "1";
+
+                setTimeout(() => {
+                    svgToShow.style.transition = "opacity 0.4s";
+                    svgToShow.style.opacity = "0";
+                }, 100);
+
+                setTimeout(() => {
+                    svgToShow.style.display = "none";
+                    svgToShow.style.transition = "";
+                }, 500);
+            });
+        });
+
+
+    </script>
+    <script src="/cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="magicmouse-2.0.0.cdn.min.js"></script>
+    <script src="/cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/assets/script.js"></script>
+
+
+
+</body></html>
