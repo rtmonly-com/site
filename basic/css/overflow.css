@@ -1,0 +1,15 @@
+.overflow\[hidden\] { overflow: hidden; }
+.overflow\[y-hidden\] { overflow-y: hidden; }
+.overflow\[x-hidden\] { overflow-x: hidden; }
+
+@media (max-width: 768px) {
+    .t-bypass-overflow-hidden { overflow: auto !important; }
+    .t-bypass-overflow-y-hidden { overflow-y: auto !important; }
+    .t-bypass-overflow-x-hidden { overflow-y: auto !important; }
+}
+
+@media (max-width: 480px) {
+    .m-bypass-overflow-hidden { overflow: auto !important; }
+    .m-bypass-overflow-y-hidden { overflow-y: auto !important; }
+    .m-bypass-overflow-x-hidden { overflow-y: auto !important; }
+}

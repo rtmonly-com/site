@@ -1,0 +1,37 @@
+@import url(root.css);
+
+* { font-family: var(--font-primary); }
+body { background: url(../images/topography.svg); fill: rgba(var(--primary), 1); background-color: rgba(var(--background), 1); color: rgba(var(--primary), 1); }
+
+.card {
+    color: rgba(var(--primary), 1);
+    background-color: rgba(var(--card), 1);
+    border-color: rgba(var(--border), 1);
+    box-shadow: 0 2px 5px rgba(var(--card-shadow), 1);
+}
+
+.card.backdrop {
+    background-color: rgba(var(--card), 0.2);
+    border-color: rgba(var(--border), 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.danger { background-color: rgba(var(--danger), 1)}
+.success { background-color: rgba(var(--success), 1)}
+.warning { background-color: rgba(var(--warning), 1)}
+.disabled { background-color: rgba(var(--secondary), 1)}
+.info { background-color: rgba(var(--info), 1)}
+
+
+.controls\[backward\]   { color: rgba(var(--primary), 1);  cursor: pointer; }
+.controls\[play\]       { color: rgba(var(--primary), 1);  cursor: pointer; }
+.controls\[forward\]    { color: rgba(var(--primary), 1); cursor: pointer; }
+.controls\[time-blank\] { height: 5px; background-color: rgba(var(--secondary), 1); cursor: pointer; }
+.controls\[time-fill\]  { height: 100%; background-color: rgba(var(--primary), 1); cursor: pointer; }
+
+@media (max-width: 748px) {
+    .controls {
+        width: calc(100% - 70px) !important;
+        padding-right: var(--responsive-space-xs);
+    }
+}
