@@ -7,9 +7,9 @@
             "name": "adrian",
             "bio": "related through money",
             "socials": {
-                "roblox": "96103852",
-                "discord": "1171261965767807028",
-                "tiktok": "rtmonly"
+                "twitch": "rtmonly",
+                "steam": "rtmonly",
+                "twitter": "rtmonly"
                         }
         }
 
@@ -20,17 +20,17 @@
         "platforms": {
 
             "instagram": {
-                "icon": "assets/img/platforms/instagram.svg",
+                "icon": "assets/img/platforms/instagram.webp",
                 "link": "https://instagram.com/"
             },
 
             "discord": {
-                "icon": "assets/img/platforms/discord.svg",
+                "icon": "assets/img/platforms/discord.webp",
                 "link": "https://discordapp.com/users/"
             },
 
             "discordserver": {
-                "icon": "assets/img/platforms/discord.svg",
+                "icon": "assets/img/platforms/discord.webp",
                 "link": "https://discord.gg/"
             },
 
@@ -40,7 +40,7 @@
             },
 
             "twitter": {
-                "icon": "assets/img/platforms/twitter.svg",
+                "icon": "assets/img/platforms/twitter.webp",
                 "link": "https://twitter.com/"
             },
 
@@ -50,47 +50,47 @@
             },
 
             "telegram": {
-                "icon": "assets/img/platforms/telegram.svg",
+                "icon": "assets/img/platforms/telegram.webp",
                 "link": "https://t.me/"
             },
 
             "github": {
-                "icon": "assets/img/platforms/github.svg",
+                "icon": "assets/img/platforms/github.webp",
                 "link": "https://github.com/"
             },
 
             "namemc": {
-                "icon": "assets/img/platforms/namemc.svg",
+                "icon": "assets/img/platforms/namemc.webp",
                 "link": "https://namemc.com/profile/"
             },
 
             "roblox": {
-                "icon": "assets/img/platforms/roblox.svg",
+                "icon": "assets/img/platforms/roblox.webp",
                 "link": "https://roblox.com/users/"
             },
 
             "soundcloud": {
-                "icon": "assets/img/platforms/soundcloud.svg",
+                "icon": "assets/img/platforms/soundcloud.webp",
                 "link": "https://www.soundcloud.com/"
             },
 
             "spotify": {
-                "icon": "assets/img/platforms/spotify.svg",
+                "icon": "assets/img/platforms/spotify.webp",
                 "link": "https://open.spotify.com/user/"
             },
 
             "steam": {
-                "icon": "assets/img/platforms/steam.svg",
+                "icon": "assets/img/platforms/steam.webp",
                 "link": "https://steamcommunity.com/id/"
             },
 
             "twitch": {
-                "icon": "assets/img/platforms/twitch.svg",
+                "icon": "assets/img/platforms/twitch.webp",
                 "link": "https://twitch.com/"
             },
 
             "snapchat": {
-                "icon": "assets/img/platforms/snapchat.svg",
+                "icon": "assets/img/platforms/snapchat.webp",
                 "link": "https://snapchat.com/add/"
             }
             
