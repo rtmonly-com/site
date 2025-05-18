@@ -90,18 +90,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const date = vouch.date || vouch.Date || vouch.timestamp || new Date().toLocaleDateString()
       const content = vouch.content || vouch.Comment || vouch.message || "No content provided"
 
-      // Get avatar URL if available, otherwise use default
+      // Get avatar URL - use the exact format provided by Discord
       let avatarUrl = "../assets/images/wumpus.png"
 
-      // Check for Discord avatar in various possible formats
-      if (vouch.avatar_url) {
-        avatarUrl = vouch.avatar_url
-      } else if (vouch.avatarURL) {
+      // Check for Discord avatar URL in various possible formats
+      if (vouch.avatarURL) {
         avatarUrl = vouch.avatarURL
-      } else if (vouch.avatar) {
-        avatarUrl = vouch.avatar
-      } else if (vouch.user && vouch.user.avatar) {
-        avatarUrl = vouch.user.avatar
+      } else if (vouch.avatar_url) {
+        avatarUrl = vouch.avatar_url
+      } else if (vouch.AvatarURL) {
+        avatarUrl = vouch.AvatarURL
       }
 
       // Process @mentions in the comment
