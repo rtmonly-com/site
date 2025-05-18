@@ -1,51 +1,29 @@
 [
-  {
-    "CustomerID": "unholyghost",
-    "AccountID": "unholyghost#0",
-    "Date": "5/11/2025",
-    "Comment": "Great service , fast , reliable and answered all my questions with proof before purchase\n\nhttps://i.imgur.com/GKv11O8.png",
-    "MessageID": "1371354489256415302"
-  },
-  {
-    "CustomerID": "a6ycia",
-    "AccountID": "a6ycia#0",
-    "Date": "5/9/2025",
-    "Comment": "bought a guild tag, communication was clear and the transaction was fast! 10/10",
-    "MessageID": "1370631541226606672"
-  },
-  {
-    "CustomerID": "lifeofivory",
-    "AccountID": "lifeofivory#0",
-    "Date": "5/9/2025",
-    "Comment": "Bought a guild tag from Adrian, he’s quick & reliable.",
-    "MessageID": "1370596277880098958"
-  },
-  {
-    "id": "1373550210390691861",
-    "author": "rtmonly",
-    "content": "e",
-    "timestamp": 1747550289486,
-    "date": "5/18/2025"
-  },
-  {
-    "id": "1373550407422447727",
-    "author": "rtmonly",
-    "content": "e",
-    "timestamp": 1747550336462,
-    "date": "5/18/2025"
-  },
-  {
-    "id": "1373550488733220874",
-    "author": "rtmonly",
-    "content": "f",
-    "timestamp": 1747550355848,
-    "date": "5/18/2025"
-  },
-  {
-    "id": "1373553020834676846",
-    "author": "rtmonly",
-    "content": "y",
-    "timestamp": 1747550959548,
-    "date": "5/18/2025"
-  }
-]
+    {
+      "CustomerID": "unholyghost",
+      "AccountID": "unholyghost#0",
+      "AvatarURL": "https://cdn.discordapp.com/avatars/479747705141198851/a_07bb43aab8c3913db9bedb64da5d4d73.gif?size=128",
+      "Date": "5/11/2025",
+      "Comment": "Great service , fast , reliable and answered all my questions with proof before purchase\n\nhttps://i.imgur.com/GKv11O8.png",
+      "MessageID": "1371354489256415302",
+      "Timestamp": 1747026788773
+    },
+    {
+      "CustomerID": "a6ycia",
+      "AccountID": "a6ycia#0",
+      "AvatarURL": "https://cdn.discordapp.com/avatars/1274187160798498820/2b18453423fda1e5d5152fc024ce9106.webp?size=128",
+      "Date": "5/9/2025",
+      "Comment": "bought a guild tag, communication was clear and the transaction was fast! 10/10",
+      "MessageID": "1370631541226606672",
+      "Timestamp": 1746854424531
+    },
+    {
+      "CustomerID": "lifeofivory",
+      "AccountID": "lifeofivory#0",
+      "AvatarURL": "https://cdn.discordapp.com/avatars/425825501118988288/92f32f0b31bd821a9dcd87251f2a7772.webp?size=128",
+      "Date": "5/9/2025",
+      "Comment": "Bought a guild tag from Adrian, he’s quick & reliable.",
+      "MessageID": "1370596277880098958",
+      "Timestamp": 1746846017094
+    }
+  ]
