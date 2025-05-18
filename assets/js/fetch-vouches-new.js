@@ -15,11 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add cache-busting parameter to prevent caching
     const cacheBuster = new Date().getTime()
 
-    // Remove the loading spinner immediately - don't show it at all
-    if (vouchesList) {
-      vouchesList.innerHTML = ""
-    }
-
     fetch(`/vouches.json?_=${cacheBuster}`)
       .then((response) => {
         if (!response.ok) {
@@ -84,9 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".load-more-container").remove()
     }
 
-    // Clear any existing content
-    if (vouchesList.innerHTML === "") {
-      // Only clear if we're not appending more vouches
+    // Clear any existing content if this is the first load
+    if (!document.querySelector(".vouch-card")) {
       vouchesList.innerHTML = ""
     }
 
@@ -95,6 +89,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const author = vouch.author || vouch.CustomerID || vouch.username || "Anonymous"
       const date = vouch.date || vouch.Date || vouch.timestamp || new Date().toLocaleDateString()
       const content = vouch.content || vouch.Comment || vouch.message || "No content provided"
+
+      // Get avatar URL if available, otherwise use default
+      let avatarUrl = "../assets/images/wumpus.png"
+
+      // Check for Discord avatar in various possible formats
+      if (vouch.avatar_url) {
+        avatarUrl = vouch.avatar_url
+      } else if (vouch.avatarURL) {
+        avatarUrl = vouch.avatarURL
+      } else if (vouch.avatar) {
+        avatarUrl = vouch.avatar
+      } else if (vouch.user && vouch.user.avatar) {
+        avatarUrl = vouch.user.avatar
+      }
 
       // Process @mentions in the comment
       const processedContent = content.replace(/@(\w+)/g, '<span class="highlighted">@$1</span>')
@@ -109,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <i class="fas fa-quote-right"></i>
         </div>
         <div class="vouch-top">
-          <img src="../assets/images/wumpus.png" alt="Client Avatar" class="vouch-avatar" />
+          <img src="${avatarUrl}" alt="Client Avatar" class="vouch-avatar" onerror="this.src='../assets/images/wumpus.png'" />
           <div class="vouch-info">
             <h3 class="vouch-name">${author}</h3>
             <p class="vouch-meta">${date}</p>
@@ -128,7 +136,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typeof AOS !== "undefined") {
       if (typeof AOS.refresh === "function") {
         setTimeout(() => {
-          window.AOS.refresh()
+          if (typeof window.AOS !== "undefined") {
+            window.AOS.refresh()
+          }
         }, 100)
       }
     }
