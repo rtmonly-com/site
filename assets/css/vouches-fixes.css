@@ -1,0 +1,28 @@
+/* Fix for username truncation */
+.vouch-info {
+  width: 100%;
+  overflow: hidden;
+}
+
+.vouch-name {
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  overflow: visible;
+  text-overflow: initial;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+/* Additional fixes for mobile */
+@media (max-width: 767px) {
+  .vouch-top {
+    flex-wrap: wrap;
+  }
+
+  .vouch-avatar {
+    margin-bottom: 0.5rem;
+  }
+}
