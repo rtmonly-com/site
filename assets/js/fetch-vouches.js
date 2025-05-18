@@ -11,8 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fetch vouches from JSON file
   function fetchVouches() {
     console.log("Fetching vouches...")
+
     // Add cache-busting parameter to prevent caching
     const cacheBuster = new Date().getTime()
+
+    // Remove the loading spinner immediately - don't show it at all
+    if (vouchesList) {
+      vouchesList.innerHTML = ""
+    }
 
     fetch(`/vouches.json?_=${cacheBuster}`)
       .then((response) => {
@@ -78,6 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".load-more-container").remove()
     }
 
+    // Clear any existing content
+    if (vouchesList.innerHTML === "") {
+      // Only clear if we're not appending more vouches
+      vouchesList.innerHTML = ""
+    }
+
     vouches.forEach((vouch, index) => {
       // Handle different possible formats of vouch data
       const author = vouch.author || vouch.CustomerID || vouch.username || "Anonymous"
@@ -97,8 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
           <i class="fas fa-quote-right"></i>
         </div>
         <div class="vouch-top">
-          <img src="/assets/images/wumpus.png" alt="Client Avatar" class="vouch-avatar" />
-          <div>
+          <img src="../assets/images/wumpus.png" alt="Client Avatar" class="vouch-avatar" />
+          <div class="vouch-info">
             <h3 class="vouch-name">${author}</h3>
             <p class="vouch-meta">${date}</p>
           </div>
@@ -116,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typeof AOS !== "undefined") {
       if (typeof AOS.refresh === "function") {
         setTimeout(() => {
-          AOS.refresh()
+          window.AOS.refresh()
         }, 100)
       }
     }
